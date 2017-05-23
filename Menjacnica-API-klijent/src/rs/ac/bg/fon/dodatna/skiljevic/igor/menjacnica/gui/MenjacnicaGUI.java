@@ -6,12 +6,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import rs.ac.bg.fon.dodatna.skiljevic.igor.menjacnica.gui_kontroler.Kontroler;
+
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MenjacnicaGUI extends JFrame {
 
@@ -115,7 +120,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return txtIznosIz;
 	}
-	private JTextField getTxtIznosU() {
+	public JTextField getTxtIznosU() {
 		if (txtIznosU == null) {
 			txtIznosU = new JTextField();
 			txtIznosU.setEditable(false);
@@ -127,6 +132,12 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnKonvertuj() {
 		if (btnKonvertuj == null) {
 			btnKonvertuj = new JButton("Konvertuj");
+			btnKonvertuj.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					
+					Kontroler.izvrsiKonverziju(txtIznosIz.getText(),comboBoxIz.getSelectedItem().toString(),comboBoxU.getSelectedItem().toString());
+				}
+			});
 			btnKonvertuj.setBounds(153, 213, 89, 23);
 		}
 		return btnKonvertuj;

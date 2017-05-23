@@ -10,6 +10,7 @@ import rs.ac.bg.fon.dodatna.skiljevic.igor.menjacnica.api_communication.Menjacni
 
 public class Zemlje {
 	Map<String, Zemlja> results;
+	private static ArrayList<Zemlja> countries;
 
 	public Map<String, Zemlja> getResults() {
 		return results;
@@ -20,12 +21,13 @@ public class Zemlje {
 	}
 
 	public static ArrayList<Zemlja> proslediNizZemalja() {
-		Gson gson = new GsonBuilder().create();
+		if (countries == null) {
+			Gson gson = new GsonBuilder().create();
 
-		Zemlje z = gson.fromJson(MenjacnicaAPICommunication.vratiZemlje(), Zemlje.class);
+			Zemlje z = gson.fromJson(MenjacnicaAPICommunication.vratiZemlje(), Zemlje.class);
 
-		ArrayList<Zemlja> countries = new ArrayList<Zemlja>(z.getResults().values());
-
+			countries = new ArrayList<Zemlja>(z.getResults().values());
+		}
 		return countries;
 	}
 

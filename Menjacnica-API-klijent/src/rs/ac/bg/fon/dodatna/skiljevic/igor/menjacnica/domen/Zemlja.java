@@ -3,24 +3,24 @@ package rs.ac.bg.fon.dodatna.skiljevic.igor.menjacnica.domen;
 public class Zemlja {
 
 	private String alpha3;
-	private String currencyID;
 	private String currencyName;
-	private String currencySimbol;
 	private String id;
 	private String name;
+	private String currencySymbol;
+	private String currencyId;
 
-	public Zemlja() {
-	}
-
-	public Zemlja(String alpha3, String currencyID, String currencyName, String currencySimbol, String id,
-			String name) {
+	public Zemlja(String alpha3, String currencyName, String id, String name, String currencySymbol,
+			String currencyId) {
 		super();
 		this.alpha3 = alpha3;
-		this.currencyID = currencyID;
 		this.currencyName = currencyName;
-		this.currencySimbol = currencySimbol;
 		this.id = id;
 		this.name = name;
+		this.currencySymbol = currencySymbol;
+		this.currencyId = currencyId;
+	}
+
+	public Zemlja() {
 	}
 
 	public String getAlpha3() {
@@ -31,28 +31,12 @@ public class Zemlja {
 		this.alpha3 = alpha3;
 	}
 
-	public String getCurrencyID() {
-		return currencyID;
-	}
-
-	public void setCurrencyID(String currencyID) {
-		this.currencyID = currencyID;
-	}
-
 	public String getCurrencyName() {
 		return currencyName;
 	}
 
 	public void setCurrencyName(String currencyName) {
 		this.currencyName = currencyName;
-	}
-
-	public String getCurrencySimbol() {
-		return currencySimbol;
-	}
-
-	public void setCurrencySimbol(String currencySimbol) {
-		this.currencySimbol = currencySimbol;
 	}
 
 	public String getId() {
@@ -69,6 +53,22 @@ public class Zemlja {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCurrencySymbol() {
+		return currencySymbol;
+	}
+
+	public void setCurrencySymbol(String currencySymbol) {
+		this.currencySymbol = currencySymbol;
+	}
+
+	public String getCurrencyId() {
+		return currencyId;
+	}
+
+	public void setCurrencyId(String currencyId) {
+		this.currencyId = currencyId;
 	}
 
 }

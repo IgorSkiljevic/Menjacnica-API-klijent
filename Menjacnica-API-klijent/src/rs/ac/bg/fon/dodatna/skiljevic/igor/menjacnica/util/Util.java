@@ -26,4 +26,13 @@ public class Util {
 		return imena;
 	}
 
+	public static String vratiSkracenicuValute(ArrayList<Zemlja> zemlje, String iz) {
+		for (Zemlja zemlja : zemlje) {
+			if(zemlja.getName().equalsIgnoreCase(iz)){
+				return zemlja.getCurrencyId();
+			}
+		}
+		return null;
+	}
+
 }
