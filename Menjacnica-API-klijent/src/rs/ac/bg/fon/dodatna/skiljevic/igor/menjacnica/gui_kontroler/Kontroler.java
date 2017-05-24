@@ -56,4 +56,9 @@ public class Kontroler {
 			JOptionPane.showMessageDialog(menjacnicaGui, "Los unos", "Greska", JOptionPane.ERROR_MESSAGE);
 		}
 	}
+
+	public static void ugasiAplikaciju() {
+		MenjacnicaAPICommunication.upisiSveTransakcijeUFile();
+		System.exit(0);
+	}
 }

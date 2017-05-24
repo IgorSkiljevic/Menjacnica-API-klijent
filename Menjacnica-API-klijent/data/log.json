@@ -1,0 +1,26 @@
+[
+  {
+    "datumVreme": "2017-05-24 19:32:44.000688",
+    "izValuta": "XAF",
+    "uValuta": "AUD",
+    "kurs": 0.00228487
+  },
+  {
+    "datumVreme": "2017-05-24 19:32:52.000762",
+    "izValuta": "COP",
+    "uValuta": "BRL",
+    "kurs": 0.00112689
+  },
+  {
+    "datumVreme": "2017-05-24 19:33:06.000198",
+    "izValuta": "AUD",
+    "uValuta": "RSD",
+    "kurs": 81.7611
+  },
+  {
+    "datumVreme": "2017-05-24 19:33:10.000671",
+    "izValuta": "KHR",
+    "uValuta": "RSD",
+    "kurs": 0.027
+  }
+]
